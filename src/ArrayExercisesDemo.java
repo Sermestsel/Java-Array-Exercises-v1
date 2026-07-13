@@ -46,7 +46,7 @@ public class ArrayExercisesDemo {
         int toplam = 0;
         boolean uygunMu;
         for (int i = 0; i < sayilar.length; i++) {
-            uygunMu=(sayilar[i] % 2 == 0);
+            uygunMu = (sayilar[i] % 2 == 0);
             if (uygunMu == ciftMi) {
                 toplam += sayilar[i];
             }
@@ -81,54 +81,56 @@ public class ArrayExercisesDemo {
         for (int i = 0; i < sayilar.length; i++) {
             boolean ciftIse;
             ciftIse = (sayilar[i] % 2 == 0);
-            if (ciftIse==ciftMi) {
-                    System.out.println(sayilar[i]);
-                }
-    }}}
-
-    public static void main(String[] args) {
-
-        Scanner input = new Scanner(System.in);
-        boolean devam = true;
-        int[] sayilar = {12, 8, 15, 5, 30, 18, -1, -8};
-
-        while (devam) {
-            menu();
-            int secim = input.nextInt();
-            switch (secim) {
-                case 1:
-                    enBuyukBul(sayilar);
-                    break;
-                case 2:
-                    enKucukBul(sayilar);
-                    break;
-                case 3:
-                    sayilariGoster(sayilar, true);
-                    break;
-                case 4:
-                    sayilariGoster(sayilar, false);
-                    break;
-                case 5:
-                    int sonuc = sayilariTopla(sayilar, true);
-                    System.out.println("Sayıların Toplamı = " + sonuc);
-                    break;
-                case 6:
-                    sonuc = sayilariTopla(sayilar, false);
-                    System.out.println("Sayıların Toplamı = " + sonuc);
-                    break;
-                case 7:
-                    sayiAra(sayilar);
-                    break;
-                case 8:
-                    System.out.println("Programdan çıkılıyor...");
-                    devam = false;
-                    break;
-                default:
-                    System.out.println("Geçersiz Seçim!");
-
+            if (ciftIse == ciftMi) {
+                System.out.println(sayilar[i]);
             }
         }
-
     }
+
+
+public static void main(String[] args) {
+
+    Scanner input = new Scanner(System.in);
+    boolean devam = true;
+    int[] sayilar = {12, 8, 15, 5, 30, 18, -1, -8};
+
+    while (devam) {
+        menu();
+        int secim = input.nextInt();
+        switch (secim) {
+            case 1:
+                enBuyukBul(sayilar);
+                break;
+            case 2:
+                enKucukBul(sayilar);
+                break;
+            case 3:
+                sayilariGoster(sayilar, true);
+                break;
+            case 4:
+                sayilariGoster(sayilar, false);
+                break;
+            case 5:
+                int sonuc = sayilariTopla(sayilar, true);
+                System.out.println("Sayıların Toplamı = " + sonuc);
+                break;
+            case 6:
+                sonuc = sayilariTopla(sayilar, false);
+                System.out.println("Sayıların Toplamı = " + sonuc);
+                break;
+            case 7:
+                sayiAra(sayilar);
+                break;
+            case 8:
+                System.out.println("Programdan çıkılıyor...");
+                devam = false;
+                break;
+            default:
+                System.out.println("Geçersiz Seçim!");
+
+        }
+    }
+
+}
 
 }
