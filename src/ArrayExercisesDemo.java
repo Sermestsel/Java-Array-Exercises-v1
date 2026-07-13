@@ -46,15 +46,9 @@ public class ArrayExercisesDemo {
         int toplam = 0;
         boolean uygunMu;
         for (int i = 0; i < sayilar.length; i++) {
-            if (ciftMi) {
-                uygunMu = (sayilar[i] % 2 == 0);
-            } else {
-                uygunMu = (sayilar[i] % 2 != 0);
-
-            }
-            if (uygunMu) {
+            uygunMu=(sayilar[i] % 2 == 0);
+            if (uygunMu == ciftMi) {
                 toplam += sayilar[i];
-
             }
         }
 
@@ -85,17 +79,12 @@ public class ArrayExercisesDemo {
 
     static void sayilariGoster(int[] sayilar, boolean ciftMi) {
         for (int i = 0; i < sayilar.length; i++) {
-            if (ciftMi) {
-                if (sayilar[i] % 2 == 0) {
+            boolean ciftIse;
+            ciftIse = (sayilar[i] % 2 == 0);
+            if (ciftIse==ciftMi) {
                     System.out.println(sayilar[i]);
                 }
-            } else {
-                if (sayilar[i] % 2 != 0) {
-                    System.out.println(sayilar[i]);
-                }
-            }
-        }
-    }
+    }}}
 
     public static void main(String[] args) {
 
